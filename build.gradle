@@ -1,0 +1,51 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.41'
+    id 'application'
+}
+
+group 'jp.ac.titech.cs.se.fineGrainedCommitAnalyzer'
+version '1.0.0'
+mainClassName = 'jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.MainKt'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+"
+    implementation "org.eclipse.jgit:org.eclipse.jgit:5.4.0.201906121030-r"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.slf4j:slf4j-jdk14:1.7.26"
+    implementation "args4j:args4j:2.33"
+    implementation "commons-io:commons-io:2.6"
+    // https://mvnrepository.com/artifact/org.bitbucket.cowwoc/diff-match-patch
+    implementation "org.bitbucket.cowwoc:diff-match-patch:1.2"
+    implementation fileTree(dir: "libs", include: "**/*.jar")
+    implementation "io.github.java-diff-utils:java-diff-utils:4.5"
+    implementation "io.github.java-diff-utils:java-diff-utils-jgit:4.5"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+run {
+    if (project.hasProperty('args')) {    // "args" というプロパティが渡されていたら
+        args project.args.split('\\s+')   // 空白文字で split して、 run タスクの args オプションにセットする
+    }
+}
+
+jar {
+    from {
+        configurations.compileClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    manifest {
+        attributes 'Main-Class': 'jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.MainKt'
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+}
