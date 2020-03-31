@@ -1,4 +1,4 @@
-package jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.model
+package jp.ac.titech.cs.se.changeBeadsPreprocessor.model
 
 import java.io.BufferedReader
 import java.io.File

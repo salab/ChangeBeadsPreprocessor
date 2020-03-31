@@ -1,10 +1,9 @@
-package jp.ac.titech.cs.se.fineGrainedCommitAnalyzer
+package jp.ac.titech.cs.se.changeBeadsPreprocessor
 
-import jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.model.ClassASTData
-import jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.model.MethodASTData
-import jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.model.SourceASTData
+import jp.ac.titech.cs.se.changeBeadsPreprocessor.model.ClassASTData
+import jp.ac.titech.cs.se.changeBeadsPreprocessor.model.MethodASTData
+import jp.ac.titech.cs.se.changeBeadsPreprocessor.model.SourceASTData
 import org.eclipse.jdt.core.dom.ASTVisitor
-import org.eclipse.jdt.core.dom.MethodDeclaration
 import org.eclipse.jdt.core.dom.TypeDeclaration
 
 class MyVisitor: ASTVisitor() {

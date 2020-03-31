@@ -1,10 +1,10 @@
-package jp.ac.titech.cs.se.fineGrainedCommitAnalyzer
+package jp.ac.titech.cs.se.changeBeadsPreprocessor
 
 import com.github.difflib.algorithm.Change
 import com.github.difflib.algorithm.jgit.HistogramDiff
 import com.github.difflib.patch.Patch
-import jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.ArgOption.Companion.argOption
-import jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.model.*
+import jp.ac.titech.cs.se.changeBeadsPreprocessor.ArgOption.Companion.argOption
+import jp.ac.titech.cs.se.changeBeadsPreprocessor.model.*
 import org.bitbucket.cowwoc.diffmatchpatch.DiffMatchPatch
 import org.eclipse.jgit.diff.DiffEntry
 import org.eclipse.jgit.diff.RenameDetector

@@ -5,14 +5,17 @@ A preprocessor for [ChangeBeadsThreader](https://github.com/salab/ChangeBeadsThr
 `ChangeBeadsPreprocessor` is a preprocessor which analyze a repository consisting of fine-grained commits and generate an input of ChangeBeadsThreader.
 
 ## Requirement
-- Java 11+
+- Java 1.8+
+- Kotlin 1.3+
 
 ## Installation
 1. `$ git clone https://github.com/salab/ChangeBeadsPreprocessor.git`
-1. `$ gradle build`
+1. `$ cd changebeadspreprocessor`
+1. `$ ./gradlew build`
+    - Output .jar file to `build/libs/`
 
 ## Usage
-- `java -jar fine-grained-commit-analyzer -s <repository path>`
+- `java -jar ChangeBeadsPreprocessor-1.0.0.jar -s <repository path>`
 - ChangeBeadsPreprocessor output the analysis result json file to the same directory as the input repository.
 
 ## Option

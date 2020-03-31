@@ -1,4 +1,4 @@
-package jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.model
+package jp.ac.titech.cs.se.changeBeadsPreprocessor.model
 
 class SourceASTData () {
     val classData: MutableList<ClassASTData> = mutableListOf()

@@ -1,17 +1,14 @@
-package jp.ac.titech.cs.se.fineGrainedCommitAnalyzer
+package jp.ac.titech.cs.se.changeBeadsPreprocessor
 
 import com.fasterxml.jackson.databind.SerializationFeature
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.ArgOption.Companion.argOption
-import jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.model.CommitData
-import jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.model.MethodData
-import jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.model.RepositoryData
+import jp.ac.titech.cs.se.changeBeadsPreprocessor.ArgOption.Companion.argOption
+import jp.ac.titech.cs.se.changeBeadsPreprocessor.model.RepositoryData
 import java.lang.System.exit
 import org.kohsuke.args4j.CmdLineException
 import org.kohsuke.args4j.CmdLineParser
 import java.io.*
 import java.nio.file.Paths
-import java.util.*
 
 
 fun main(args: Array<String>) {

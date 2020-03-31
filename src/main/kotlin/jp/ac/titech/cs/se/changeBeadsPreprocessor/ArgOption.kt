@@ -1,4 +1,4 @@
-package jp.ac.titech.cs.se.fineGrainedCommitAnalyzer
+package jp.ac.titech.cs.se.changeBeadsPreprocessor
 
 import org.kohsuke.args4j.Option
 

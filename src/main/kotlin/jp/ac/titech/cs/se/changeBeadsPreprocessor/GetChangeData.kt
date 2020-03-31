@@ -1,7 +1,7 @@
-package jp.ac.titech.cs.se.fineGrainedCommitAnalyzer
+package jp.ac.titech.cs.se.changeBeadsPreprocessor
 
-import jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.model.SourceASTData
-import jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.model.SourceFile
+import jp.ac.titech.cs.se.changeBeadsPreprocessor.model.SourceASTData
+import jp.ac.titech.cs.se.changeBeadsPreprocessor.model.SourceFile
 import org.eclipse.core.runtime.NullProgressMonitor
 import org.eclipse.jdt.core.JavaCore
 import org.eclipse.jdt.core.dom.AST

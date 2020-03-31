@@ -3,9 +3,9 @@ plugins {
     id 'application'
 }
 
-group 'jp.ac.titech.cs.se.fineGrainedCommitAnalyzer'
+group 'jp.ac.titech.cs.se.changeBeadsPreprocessor'
 version '1.0.0'
-mainClassName = 'jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.MainKt'
+mainClassName = 'jp.ac.titech.cs.se.changeBeadsPreprocessor.MainKt'
 
 repositories {
     mavenCentral()
@@ -45,7 +45,7 @@ jar {
         }
     }
     manifest {
-        attributes 'Main-Class': 'jp.ac.titech.cs.se.fineGrainedCommitAnalyzer.MainKt'
+        attributes 'Main-Class': 'jp.ac.titech.cs.se.changeBeadsPreprocessor.MainKt'
     }
     exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
 }
